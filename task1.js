@@ -15,25 +15,24 @@
 // Write a program that outputs such a list so that the lazy teacher can quickly check the correct results.
 
 const listTheFactors = () => {
-    // initialize variables
-    let num = 900900;
-    let result = 0;
-    let arr = [];
-  
-    // loop through the main num to find the combinations of divisible factors
-    for (let i = 0; i < num; i++) {
-      if (num % i === 0) {
-        result = num / i;
-  
-        // check on the order and ensure the first factor is smaller than the second factor and push to the array container
-        if (i < i + 1 && i < result) {
-          arr.push(`${i} * ${result}`);
-        }
+  // initialize variables
+  let num = 900900;
+  let result = 0;
+  let arr = [];
+
+  // loop through the main num to find the combinations of divisible factors
+  for (let i = 0; i < num; i++) {
+    if (num % i === 0) {
+      result = num / i;
+
+      // check on the order and ensure the first factor is smaller than the second factor and push to the array container
+      if (i < i + 1 && i < result) {
+        arr.push(`${i} * ${result}`);
       }
     }
-    // return the array as a string
-    return `900900 = ${arr.join("\n= ")}`
-  };
-  
-  console.log(listTheFactors());
-  
+  }
+  // return the array as a string
+  return `900900 = ${arr.join("\n= ")}`;
+};
+
+// console.log(listTheFactors());
