@@ -22,4 +22,4 @@ const findHarshardNum = (n) => {
   }
 };
 
-console.log(findHarshardNum(12));
+// console.log(findHarshardNum(12));
