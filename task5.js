@@ -6,7 +6,6 @@
 // example: "Replace 40 ml of your syrup with water."
 
 const findDilution = (syrup, currentDilution, recommendedDilution) => {
-    
   // handle the edge cases
   if (
     !syrup ||
@@ -39,4 +38,4 @@ const findDilution = (syrup, currentDilution, recommendedDilution) => {
   }
 };
 
-console.log(findDilution(267, 35.45, 120));
+// console.log(findDilution(267, 20, 15));
