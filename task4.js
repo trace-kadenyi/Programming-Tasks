@@ -11,23 +11,35 @@
 // Write a program that tells Alice 365 possible combinations (and the number of total combinations) so
 // that she can wear a different combination every day of the year.
 
-const findCombinations = () => {
-    let totalCombinations = 0;
-    let combinations = [];
-    
-    for (let i = 0; i < 4; i++) {
-        for (let j = i + 1; j < 4; j++) {
-        combinations.push([i, j]);
-        totalCombinations++;
-        }
-    }
-    
-    for (let i = 0; i < 4; i++) {
-        combinations.push([i]);
-        totalCombinations++;
-    }
-    
-    return `Alice has ${totalCombinations} possible combinations of rings: ${combinations}`;
-}
+const findRingCombinations = (arr) => {
+  // initialize an array to store all possible combinations
+  let combination = [];
 
-console.log(findCombinations());
+  // find the factor of the array length
+  let factor = Math.pow(2, arr.length);
+
+  // loop through the factor
+  for (let i = 0; i < factor; i++) {
+    // initialize an array to store the combination
+    let container = [];
+    // loop through the array
+    for (let j = 0; j < arr.length; j++) {
+      if (i & Math.pow(2, j)) {
+        container.push(arr[j]);
+      }
+    }
+    // push the combination to the combination array
+    if (container.length > 0) {
+      combination.push(container);
+    }
+  }
+
+  // sort the combination array by length
+  combination.sort((a, b) => a.length - b.length);
+
+  // print the combination
+  console.log(combination.join("\n"));
+  return `\nALICE HAS A TOTAL OF ${combination.length} RING COMBINATIONS.`;
+};
+
+// console.log(findRingCombinations(["agate", "diamond", "diamond", "citrine"]));
