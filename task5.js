@@ -38,4 +38,4 @@ const findDilution = (syrup, currentDilution, recommendedDilution) => {
   }
 };
 
-// console.log(findDilution(267, 20, 15));
+// console.log(findDilution(267, 30, 15));
