@@ -39,4 +39,4 @@ const findDeficientAbundantPerfectInt = (n) => {
   }
 };
 
-console.log(findDeficientAbundantPerfectInt(30));
+// console.log(findDeficientAbundantPerfectInt(30));
