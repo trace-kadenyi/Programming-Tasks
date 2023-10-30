@@ -25,6 +25,7 @@ const findDilution = (syrup, currentDilution, recommendedDilution) => {
   currentDilution = (currentDilution / 100) * syrup;
   recommendedDilution = (recommendedDilution / 100) * syrup;
 
+  // check if the currentDilution is greater than the recommendedDilution and vice versa
   if (currentDilution > recommendedDilution) {
     return `Replace ${(currentDilution - recommendedDilution).toFixed(
       2
